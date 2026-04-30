@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio Rafeyfa Ashyla Putri</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+<body>
+<video autoplay loop muted playsinline class="back-vid">
+    <source src="images/rain_falling_shape_tiny_glowing_heartsmp_.mp4" type="video/mp4">
+</video>
+<section class="main-section">
+    <nav>
+        <h1 data-aos="zoom-in" data-aos-duration="1000" class="nav-logo">
+            <img src="images/logo.webp" alt="Zihad Arkhan logo">
+            <span><span class="brand-accent">Rafeyfa </span>Ashyla Putri</span>
+        </h1>
+        <ul id="nav-menu">
+            <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="#" class="active">Home </a></li>
+            <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#">About</a></li>
+            <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#">Projects</a></li>
+            <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#">Skills</a></li>
+            <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500"><a href="#">Content</a></li>
+        </ul>
+        <div class="menu-icon" id="menu-icon">
+            <i class='bx bx-menu'></i>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-info">
+            <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">Hi, I'm Rafeyfa Ashyla Putri</h1>
+            <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">I'm Student</h2>
+            <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">I'm a student of Al-Aiman
+                Pontianak</p>
+
+            <div class="Buttons">
+                <button class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1100">Hire me
+                </button>
+                <ul class="ul-icons">
+                    <li><a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200"><i
+                            class="bx bxl-github"></i></a></li>
+                    <li><a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300"><i
+                            class="bx bxl-twitter"></i></a></li>
+                    <li><a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1400"><i
+                            class="bx bxl-youtube"></i></a></li>
+                    <li><a href="#" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500"><i
+                            class="bx bxl-facebook-circle"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+            <div class="hero-img" data-aos="zoom-in-left" data-aos-duration="2500">
+                <img src="images/ashyla.webp" alt="person-img">
+            </div>
+        </div>
+
+        <div class="info-sec">
+            <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1600">
+                <h1>4+</h1>
+                <p>Year of <br> Experience</p>
+            </div>
+            <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1700">
+                <h1>7+</h1>
+                <p>Technical <br> Skills</p>
+            </div>
+            <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1800">
+                <h1>10+</h1>
+                <p>Projects <br> Completed</p>
+            </div>
+            <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1900">
+                <h1>10+</h1>
+                <p>Happy <br> Clients</p>
+            </div>
+        </div>
+</section>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+
+    const menuIcon = document.getElementById('menu-icon');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuIcon.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        const icon = menuIcon.querySelector('i');
+        if (navMenu.classList.contains('active')) {
+            icon.classList.replace('bx-menu', 'bx-x');
+        } else {
+            icon.classList.replace('bx-x', 'bx-menu');
+        }
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('#nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            menuIcon.querySelector('i').classList.replace('bx-x', 'bx-menu');
+        });
+    });
+</script>
+</body>
+</html>
